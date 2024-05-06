@@ -1,0 +1,27 @@
+$font-size-root: 62.5%; // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+$font-size-base: 2rem; // $font-size-base affects the font size of the body text
+
+
+// Colores
+$verde: #84D9BC;
+$gris : #313C4E;
+
+$primary : $verde;
+$secondary : $gris;
+
+//Tipografia
+$headings-font-family: 'Poppins', sans-serif;
+$headings-font-weight: 700;
+$font-family-sans-serif: 'Poppins', sans-serif;
+$h1-font-size: 4.5rem;
+$h2-font-size: 3.6rem;
+$h3-font-size: 3rem;
+
+// Spacing
+// Control the default styling of most Bootstrap elements by modifying these
+$spacer: 5rem;
+
+
+
+// Importar todas las funcionalidades de bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';

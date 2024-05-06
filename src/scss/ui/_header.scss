@@ -1,0 +1,33 @@
+@use '../custom' as *;
+@use 'utils/mixins' as m;
+
+.site-header {
+    //Esta ruta va en función de la versión de la carpeta 'build/css/app.css' como si ya estuviera compilada...
+    @include m.bgImage('../img-copy/header.jpg', $secondary); 
+
+    .logo {
+        max-width: 20rem;
+        margin: 0 auto;
+        @include media-breakpoint-up(md) {
+            margin: 0;
+        }
+    }
+
+    .contenido {
+        padding-block: 10rem;
+        @include media-breakpoint-up(md) {
+            max-width: 50%;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-block: 15rem;
+            max-width: 40%;
+        }
+        h1 {
+            font-size: 4.5rem;
+            color: $white;
+            @include media-breakpoint-up(md) {
+                font-size: 6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+// Primero se debe de importar 'utils', ''componentes' etc, para que estén disponibles para su uso en los archivos correspondientes
+@use 'utils'; 
+@use 'componentes';
+
+// Luego se importa los archivos que utilizarán los elementos
+@use 'ui'; 

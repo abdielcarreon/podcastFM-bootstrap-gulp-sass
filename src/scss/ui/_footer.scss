@@ -1,0 +1,63 @@
+@use '../custom' as *;
+
+// Footer construido con BEM y mixins de Bootstrap
+
+.footer {
+    background-color: $secondary;
+    color: $white;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+        text-align: left;
+    }
+
+    &__container {
+        @include make-container; // Crea el contenedor de Bootstrap pero hay que darle el ancho correspondiente ya sea con
+        //"$key: xxl" o mediante "max-width: 1320px;"
+        max-width: map-get($map: $container-max-widths, $key: xxl);
+        //@extend .container-xl; 
+       //max-width: 1320px;
+    }
+    &__row {
+        padding-block: 5rem;
+        @include make-row
+    }
+    &__widget {
+        margin-bottom: 2rem;
+        @include make-col-ready;
+        @include media-breakpoint-up(md) {
+            @include make-col(3)
+        }
+    }
+
+    &__logo {
+        width: 20rem;
+        margin-bottom: 5rem;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+    }
+    &__heading {
+        color: $primary;
+    }
+    &__link {
+        color: $white;
+        text-decoration: none;
+        display: block;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    &__copyright {
+        @include make-container; // Crea el contenedor de Bootstrap pero hay que darle el ancho correspondiente ya sea con
+        //"$key: xxl" o mediante "max-width: 1320px;"
+        max-width: map-get($map: $container-max-widths, $key: xxl);
+        //@extend .container-xl; 
+       //max-width: 1320px;
+
+       border-top: 2px solid $primary;
+       text-align: center;
+       font-size: 1.2rem;
+       padding: 1rem;
+       margin-bottom: 0;
+    }
+}
